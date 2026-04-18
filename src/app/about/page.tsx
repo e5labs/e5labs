@@ -93,25 +93,23 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="flex items-center justify-center self-center">
-              <div className="relative h-[400px] w-full max-w-[480px] rounded-xl bg-primary-800 border border-primary-700 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-8">
-                  <div className="grid grid-cols-3 gap-2 sm:gap-4">
-                    {[...Array(9)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="flex h-10 w-10 sm:h-16 sm:w-16 items-center justify-center rounded-lg border border-accent-amber/20 bg-accent-amber/5"
-                      >
-                        <div
-                          className={`h-4 w-4 rounded-full ${
-                            i % 3 === 0
-                              ? "border-2 border-accent-amber"
-                              : i % 3 === 1
-                              ? "bg-accent-amber/30"
-                              : "border-2 border-accent-slate-blue/40"
-                          }`}
-                        />
-                      </div>
-                    ))}
+              <div className="relative w-full max-w-[480px] space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-xl border border-primary-600 bg-gradient-to-br from-primary-800 to-primary-900 p-6 text-center">
+                    <p className="font-heading text-3xl font-bold text-accent-amber">50+</p>
+                    <p className="mt-1 text-sm text-neutral-300">Projects shipped</p>
+                  </div>
+                  <div className="rounded-xl border border-primary-600 bg-gradient-to-br from-primary-800 to-primary-900 p-6 text-center">
+                    <p className="font-heading text-3xl font-bold text-accent-amber">99.9%</p>
+                    <p className="mt-1 text-sm text-neutral-300">Uptime delivered</p>
+                  </div>
+                  <div className="rounded-xl border border-primary-600 bg-gradient-to-br from-primary-800 to-primary-900 p-6 text-center">
+                    <p className="font-heading text-3xl font-bold text-accent-amber">24h</p>
+                    <p className="mt-1 text-sm text-neutral-300">Response time</p>
+                  </div>
+                  <div className="rounded-xl border border-primary-600 bg-gradient-to-br from-primary-800 to-primary-900 p-6 text-center">
+                    <p className="font-heading text-3xl font-bold text-accent-amber">3+</p>
+                    <p className="mt-1 text-sm text-neutral-300">Years in production</p>
                   </div>
                 </div>
               </div>
@@ -120,7 +118,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-accent py-20 md:py-28">
+      <section className="section-divider bg-primary-900 py-20 md:py-28">
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
           <SectionTitle
             eyebrow="Our Values"

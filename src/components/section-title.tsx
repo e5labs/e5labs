@@ -42,7 +42,7 @@ export function SectionTitle({
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-lg text-neutral-400 leading-relaxed">
+        <p className="mt-4 text-lg text-neutral-300 leading-relaxed">
           {description}
         </p>
       )}
