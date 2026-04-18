@@ -95,11 +95,11 @@ export function ContactForm() {
         />
       </div>
       <div>
-        <label className="mb-2 block text-sm font-medium text-neutral-300">
+        <label id="project-type-label" className="mb-2 block text-sm font-medium text-neutral-300">
           Project type
         </label>
         <Select value={projectType} onValueChange={(value: string | null) => setProjectType(value ?? "")}>
-          <SelectTrigger className="h-12 w-full bg-primary-800 border-primary-700 text-neutral-50 focus-visible:ring-accent-amber/30 focus-visible:border-accent-amber [&]:data-placeholder:text-neutral-500">
+          <SelectTrigger aria-labelledby="project-type-label" className="h-12 w-full bg-primary-800 border-primary-700 text-neutral-50 focus-visible:ring-accent-amber/30 focus-visible:border-accent-amber [&]:data-placeholder:text-neutral-500">
             <SelectValue placeholder="Select a type..." />
           </SelectTrigger>
           <SelectContent className="bg-primary-800 border-primary-700 text-neutral-50">

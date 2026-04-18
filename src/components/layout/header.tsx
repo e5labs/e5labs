@@ -66,7 +66,7 @@ export function Header() {
         <div className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between px-4 md:px-8 lg:px-10">
           <Logo aria-label="E5Labs home" />
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav aria-label="Main navigation" className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <NavLink
                 key={link.href}
@@ -100,7 +100,7 @@ export function Header() {
               className="w-[300px] border-l-2 border-l-accent-amber/30 border-primary-700/40 bg-primary-900 sm:w-[350px]"
             >
               <SheetTitle className="sr-only">Navigation menu</SheetTitle>
-              <nav className="flex flex-col gap-6 mt-12">
+              <nav aria-label="Mobile navigation" className="flex flex-col gap-6 mt-12">
                 {navLinks.map((link) => (
                   <NavLink
                     key={link.href}
