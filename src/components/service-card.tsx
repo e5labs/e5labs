@@ -22,7 +22,7 @@ export function ServiceCard({
       <h3 className="mt-6 font-heading text-xl font-semibold text-neutral-50">
         {title}
       </h3>
-      <p className="mt-3 text-neutral-400 leading-relaxed">{description}</p>
+      <p className="mt-3 max-w-prose text-neutral-400 leading-relaxed">{description}</p>
       {href && (
         <div className="mt-auto pt-6">
           <Link

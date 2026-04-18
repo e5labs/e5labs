@@ -35,6 +35,14 @@ export const metadata: Metadata = {
     url: "https://e5labs.com/services",
     siteName: "E5Labs",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Services — E5Labs",
+      },
+    ],
   },
 };
 
@@ -121,9 +129,9 @@ const technologies = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="relative flex min-h-[40vh] items-center justify-center overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
+      <section className="relative flex min-h-[45vh] items-center justify-center overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
         <HeroPattern />
-        <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-24 text-center md:px-8 lg:px-10">
+        <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-32 text-center md:px-8 lg:px-10">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-0.5 w-6 bg-accent-amber" />
             <span className="text-xs uppercase tracking-[0.08em] text-accent-amber font-medium">
@@ -142,27 +150,27 @@ export default function ServicesPage() {
 
       <section className="hero-divider py-20 md:py-28">
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
-          <div className="space-y-0">
+          <div className="space-y-8">
             {services.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
-                className="scroll-mt-24 border-t border-primary-700/50 py-12 md:py-20 first:border-t-0 first:pt-0"
+                className="scroll-mt-24 rounded-xl border border-primary-700/50 bg-primary-900/30 p-8 transition-all duration-300 hover:border-primary-600/60"
               >
-                <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 lg:items-start">
+                <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8 lg:items-start">
                   <div className="lg:col-span-7">
-                    <div className="flex items-start gap-6">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent-amber/20 text-accent-amber font-heading font-semibold text-sm ring-1 ring-accent-amber/30 sm:block hidden">
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-amber/20 text-accent-amber font-heading font-semibold text-sm ring-1 ring-accent-amber/30">
                         {service.number}
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           <service.icon className="h-6 w-6 text-accent-amber" />
-                          <h2 className="font-heading text-2xl font-semibold text-neutral-50">
+                          <h2 className="font-heading text-3xl font-semibold text-neutral-50 sm:text-[2.5rem] sm:leading-[1.2]">
                             {service.title}
                           </h2>
                         </div>
-                        <p className="text-lg text-neutral-300 leading-relaxed">
+                        <p className="max-w-prose text-lg text-neutral-300 leading-relaxed">
                           {service.description}
                         </p>
                       </div>
@@ -211,7 +219,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section-divider py-20 md:py-28">
+      <section className="section-divider py-14 md:py-20">
         <div className="mx-auto max-w-[1280px] px-4 text-center md:px-8 lg:px-10">
           <SectionTitle
             title="Ready to start a project?"

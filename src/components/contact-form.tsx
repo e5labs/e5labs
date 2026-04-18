@@ -4,10 +4,26 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { ArrowRight } from "lucide-react";
+
+const projectTypes = [
+  { value: "web-application", label: "Web Application" },
+  { value: "developer-tool", label: "Developer Tool" },
+  { value: "cloud-infrastructure", label: "Cloud Infrastructure" },
+  { value: "consulting", label: "Consulting" },
+  { value: "other", label: "Other" },
+];
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [projectType, setProjectType] = useState("");
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -79,26 +95,21 @@ export function ContactForm() {
         />
       </div>
       <div>
-        <label
-          htmlFor="projectType"
-          className="mb-2 block text-sm font-medium text-neutral-300"
-        >
+        <label className="mb-2 block text-sm font-medium text-neutral-300">
           Project type
         </label>
-        <select
-          id="projectType"
-          name="projectType"
-          className="h-12 w-full rounded-lg border border-primary-700 bg-primary-800 px-3 text-neutral-50 focus:ring-2 focus:ring-accent-amber/30 focus:border-accent-amber focus:outline-none"
-        >
-          <option value="">Select a type...</option>
-          <option value="web-application">Web Application</option>
-          <option value="developer-tool">Developer Tool</option>
-          <option value="cloud-infrastructure">
-            Cloud Infrastructure
-          </option>
-          <option value="consulting">Consulting</option>
-          <option value="other">Other</option>
-        </select>
+        <Select value={projectType} onValueChange={(value: string | null) => setProjectType(value ?? "")}>
+          <SelectTrigger className="h-12 w-full bg-primary-800 border-primary-700 text-neutral-50 focus-visible:ring-accent-amber/30 focus-visible:border-accent-amber [&]:data-placeholder:text-neutral-500">
+            <SelectValue placeholder="Select a type..." />
+          </SelectTrigger>
+          <SelectContent className="bg-primary-800 border-primary-700 text-neutral-50">
+            {projectTypes.map((type) => (
+              <SelectItem key={type.value} value={type.value}>
+                {type.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
       <div>
         <label

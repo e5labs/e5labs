@@ -17,7 +17,7 @@ const serviceLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-primary-950">
+    <footer className="bg-primary-950 border-t-2 border-accent-amber/20">
       <div className="mx-auto max-w-[1280px] px-4 py-16 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
@@ -26,6 +26,7 @@ export function Footer() {
                 E<span className="text-accent-amber">5</span>Labs
               </span>
             </Link>
+            <div className="mt-2 h-0.5 w-6 bg-accent-amber" />
             <p className="mt-4 text-sm text-neutral-400 max-w-xs">
               Web applications, developer tools, and cloud infrastructure built
               by engineers who own the result. Remote-first, production-obsessed.
@@ -89,7 +90,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-accent-amber/20 pt-8">
+        <div className="mt-12 border-t border-primary-700/40 pt-8">
           <p className="text-sm text-neutral-400">
             &copy; {new Date().getFullYear()} E5Labs. All rights reserved.
           </p>

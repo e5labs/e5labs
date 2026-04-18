@@ -16,6 +16,26 @@ export const metadata: Metadata = {
     url: "https://e5labs.com",
     siteName: "E5Labs",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "E5Labs — Engineering That Changes the Outcome",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "E5Labs — Engineering That Changes the Outcome",
+    description:
+      "Web applications, developer tools, and cloud infrastructure built by engineers who own the result — from first commit to production health check.",
+    images: [
+      {
+        url: "/opengraph-image",
+        alt: "E5Labs — Engineering That Changes the Outcome",
+      },
+    ],
   },
 };
 

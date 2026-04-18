@@ -14,15 +14,23 @@ export const metadata: Metadata = {
     url: "https://e5labs.com/contact",
     siteName: "E5Labs",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Contact — E5Labs",
+      },
+    ],
   },
 };
 
 export default function ContactPage() {
   return (
     <>
-      <section className="relative flex min-h-[30vh] items-center justify-center overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
+      <section className="relative flex min-h-[45vh] items-center justify-center overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
         <HeroPattern />
-        <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-24 text-center md:px-8 lg:px-10">
+        <div className="relative z-10 mx-auto max-w-[1280px] px-4 py-32 text-center md:px-8 lg:px-10">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-0.5 w-6 bg-accent-amber" />
             <span className="text-xs uppercase tracking-[0.08em] text-accent-amber font-medium">
@@ -45,7 +53,7 @@ export default function ContactPage() {
           <h2 className="sr-only">Send us a message</h2>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
-              <div className="rounded-xl border border-primary-600 bg-primary-800/50 p-8">
+              <div className="rounded-xl border border-primary-700 bg-primary-800/50 p-8">
                 <ContactForm />
               </div>
             </div>
