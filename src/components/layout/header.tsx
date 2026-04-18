@@ -88,10 +88,12 @@ export function Header() {
           </div>
 
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger className="md:hidden">
-              <Button variant="ghost" size="icon" aria-label="Toggle menu">
-                <Menu className="h-5 w-5" />
-              </Button>
+            <SheetTrigger
+              render={
+                <Button variant="ghost" size="icon" className="md:hidden" aria-label="Toggle menu" />
+              }
+            >
+              <Menu className="h-5 w-5" />
             </SheetTrigger>
             <SheetContent
               side="right"

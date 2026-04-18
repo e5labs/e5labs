@@ -27,9 +27,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-neutral-400 max-w-xs">
-              Software engineering for teams that can&apos;t afford to ship
-              anything less. Applications, tools, and infrastructure — built to
-              hold up.
+              Web applications, developer tools, and cloud infrastructure built
+              by engineers who own the result. Remote-first, production-obsessed.
             </p>
           </div>
 

@@ -8,7 +8,15 @@ import { Target, Rocket, ShieldCheck, Eye } from "lucide-react";
 export const metadata: Metadata = {
   title: "About — E5Labs",
   description:
-    "E5Labs is an engineering-first firm. We solve hard software problems where performance, reliability, and developer experience change the outcome.",
+    "E5Labs is an engineering-first software firm. We solve hard problems where performance, reliability, and developer experience are the difference between a product that works and one that wins.",
+  openGraph: {
+    title: "About — E5Labs",
+    description:
+      "E5Labs is an engineering-first software firm. We solve hard problems where performance, reliability, and developer experience are the difference between a product that works and one that wins.",
+    url: "https://e5labs.com/about",
+    siteName: "E5Labs",
+    type: "website",
+  },
 };
 
 const values = [
@@ -16,7 +24,7 @@ const values = [
     icon: Target,
     title: "Precision Over Volume",
     description:
-      "One thing built right beats ten things built passably. We take on fewer problems so we can solve them thoroughly.",
+      "One thing built right beats ten things built passably. We take on fewer problems so we can solve them thoroughly — and stand behind every result.",
   },
   {
     icon: Rocket,
@@ -28,13 +36,13 @@ const values = [
     icon: ShieldCheck,
     title: "Own the Outcome",
     description:
-      "No hand-offs into the void. We stay past launch-day — fixing, tuning, and owning the results alongside you.",
+      "No hand-offs into the void. We stay past launch day — fixing, tuning, and owning the results alongside you. Your production problems are our production problems.",
   },
   {
     icon: Eye,
     title: "Transparency",
     description:
-      "No black boxes, no pleasant surprises turning into problems. We share our thinking, our progress, and our mistakes as they happen.",
+      "No black boxes, no pleasant surprises turning into problems. We share our thinking, our progress, and our mistakes as they happen — because trust is earned in the open.",
   },
 ];
 
@@ -54,9 +62,9 @@ export default function AboutPage() {
             Engineers first.
           </h1>
           <p className="mx-auto mt-6 max-w-[600px] text-lg text-neutral-300 leading-relaxed">
-            We&apos;re a team of builders who believe great software comes from
+            We&apos;re a team of engineers who believe great software comes from
             deep technical understanding, honest communication, and the
-            discipline to keep shipping until it&apos;s right.
+            discipline to ship work that holds up under real conditions.
           </p>
         </div>
       </section>
@@ -67,20 +75,20 @@ export default function AboutPage() {
             <div>
               <SectionTitle
                 eyebrow="Our Mission"
-                title="Solving hard software problems"
+                title="Software where quality decides the outcome"
               />
               <div className="mt-6 space-y-4 text-lg text-neutral-400 leading-relaxed">
                 <p>
                   E5Labs exists to solve the software problems where engineering
-                  quality decides the outcome — where a 10x improvement in
+                  quality decides the outcome — where a meaningful improvement in
                   performance, reliability, or developer experience is the
                   difference between a product that works and one that wins.
                 </p>
                 <p>
                   We partner with teams building infrastructure, platforms, and
-                  tools that need to work at scale and stay working. No vanity
-                  features, no padding the backlog. Just software that earns
-                  trust — and keeps it.
+                  tools that need to perform at scale and stay running under
+                  pressure. No vanity features, no padding the backlog. Just
+                  software that earns trust — and keeps it.
                 </p>
               </div>
             </div>
@@ -116,8 +124,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
           <SectionTitle
             eyebrow="Our Values"
-            title="What guides us"
-            description="The principles behind every decision, every line of code, every partnership."
+            title="What guides every decision"
+            description="The principles behind every architectural choice, every line of code, every partnership."
             align="center"
           />
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 items-stretch">
@@ -132,17 +140,15 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
           <SectionTitle
             eyebrow="Our Team"
-            title="The people behind the code"
+            title="Deep expertise across the stack"
+            description="Full-stack, backend, and infrastructure engineers with production experience at scale."
             align="center"
           />
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
-            <TeamCard initials="EN" name="Engineer N" title="Full-Stack Engineer" />
-            <TeamCard initials="EM" name="Engineer M" title="Backend Engineer" />
-            <TeamCard initials="ES" name="Engineer S" title="Cloud Architect" />
+            <TeamCard initials="FS" name="Full-Stack Engineering" title="React · Next.js · Node" />
+            <TeamCard initials="BE" name="Backend Engineering" title="APIs · Data · Reliability" />
+            <TeamCard initials="IN" name="Infrastructure" title="Cloud · DevOps · Scale" />
           </div>
-          <p className="mt-12 text-center text-neutral-400">
-            E5Labs team profiles coming soon.
-          </p>
         </div>
       </section>
     </>

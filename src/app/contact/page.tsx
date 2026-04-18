@@ -6,11 +6,14 @@ import { Mail, Clock } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact — E5Labs",
   description:
-    "Tell us about your project. We respond within 24 hours — usually sooner.",
+    "Start a conversation with E5Labs. Tell us about your project and we'll respond within 24 hours with next steps.",
   openGraph: {
     title: "Contact — E5Labs",
     description:
-      "Tell us about your project. We respond within 24 hours — usually sooner.",
+      "Start a conversation with E5Labs. Tell us about your project and we'll respond within 24 hours with next steps.",
+    url: "https://e5labs.com/contact",
+    siteName: "E5Labs",
+    type: "website",
   },
 };
 
@@ -30,14 +33,16 @@ export default function ContactPage() {
             Let&apos;s build something.
           </h1>
           <p className="mx-auto mt-6 max-w-[600px] text-lg text-neutral-300 leading-relaxed">
-            Tell us about your project and we&apos;ll get back to you within 24
-            hours — usually sooner.
+            Whether you&apos;re early-stage with a concept or scaling an
+            existing system, we&apos;d like to hear about what you&apos;re
+            building — and where it needs to go next.
           </p>
         </div>
       </section>
 
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
+          <h2 className="sr-only">Send us a message</h2>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
               <ContactForm />
@@ -77,9 +82,10 @@ export default function ContactPage() {
                 </div>
                 <div className="mt-8 rounded-xl border border-primary-700 bg-primary-800 p-6">
                   <p className="text-sm text-neutral-400 leading-relaxed">
-                    Whether you&apos;re early-stage with a concept or further
-                    along with existing systems, we&apos;d like to hear about
-                    what you&apos;re building — and where it needs to go next.
+                    We work with teams at every stage — validating a concept,
+                    scaling an existing product, or re-architecting a system
+                    that needs to hold up under pressure. The earlier you bring
+                    us in, the more value we can add.
                   </p>
                 </div>
               </div>

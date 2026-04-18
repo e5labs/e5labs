@@ -19,21 +19,21 @@ const services = [
     icon: Globe,
     title: "Web Applications",
     description:
-      "Full-stack platforms built for real users and real traffic. React, Next.js, Node — shipped fast, hardened in production.",
+      "Full-stack platforms that handle real traffic and real users — from MVP to production scale. React, Next.js, Node, built to evolve with your product.",
     href: "/services#web-development",
   },
   {
     icon: Terminal,
     title: "Developer Tools",
     description:
-      "CLIs, SDKs, and internal platforms that engineers actually want to use. We build the tools we'd reach for ourselves.",
+      "CLIs, SDKs, and internal platforms that make engineering teams faster. Type-safe, well-documented, and designed for the workflows your team actually runs.",
     href: "/services#dev-tools",
   },
   {
     icon: Cloud,
     title: "Cloud Infrastructure",
     description:
-      "Architecture that stays up under load, deploys without drama, and costs what it should. Reliable at any scale.",
+      "Architecture that stays up under load, ships without drama, and costs what it should. From container orchestration to observability — reliable at every scale.",
     href: "/services#cloud-infrastructure",
   },
 ];
@@ -43,19 +43,19 @@ const processSteps = [
     icon: Search,
     title: "Discover",
     description:
-      "We learn your domain first — the constraints, the failure modes, the things that matter at 3 AM. Then we plan.",
+      "We learn your domain first — the constraints, the failure modes, the things that break at 3 AM. Then we plan around what actually matters.",
   },
   {
     icon: Hammer,
     title: "Build",
     description:
-      "Tight loops, working software, fast feedback. We ship early, measure what matters, and refine until it's right.",
+      "Tight feedback loops, working software from day one. We ship early, measure what matters, and refine until it's right.",
   },
   {
     icon: HeartHandshake,
     title: "Operate",
     description:
-      "We don't vanish after launch. Monitoring, optimization, and production support — because software lives or dies in production.",
+      "We don't vanish after launch. Monitoring, optimization, and production support — because software lives or dies in production, and we stay for both.",
   },
 ];
 
@@ -72,14 +72,15 @@ function HeroSection() {
             </span>
           </div>
           <h1 className="font-heading text-[3rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-50 sm:text-[3.75rem] lg:text-[4.5rem] animate-fade-up opacity-0 [animation-delay:150ms] motion-reduce:animate-none motion-reduce:opacity-100">
-            We build software that{" "}
+            Engineering that{" "}
             <span className="bg-gradient-to-r from-accent-amber via-accent-amber-light to-accent-amber bg-clip-text text-transparent">
-              matters
+              changes the outcome
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-[600px] text-lg text-neutral-300 leading-relaxed animate-fade-up opacity-0 [animation-delay:300ms] motion-reduce:animate-none motion-reduce:opacity-100">
-            High-performance applications, developer tools, and cloud
-            infrastructure — built by engineers who stay until it works.
+            We build the web applications, developer tools, and cloud
+            infrastructure where engineering quality is the difference between
+            shipping and succeeding.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-up opacity-0 [animation-delay:450ms] motion-reduce:animate-none motion-reduce:opacity-100">
             <Button
@@ -111,8 +112,8 @@ function ServicesSection() {
       <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
         <SectionTitle
           eyebrow="What We Build"
-          title="Shipping software that holds up"
-          description="We concentrate on the work where engineering quality changes the outcome — where cutting corners costs more than doing it right."
+          title="Software that holds up — and scales"
+          description="We concentrate on the work where engineering quality decides the outcome. The systems, platforms, and tools where cutting corners costs more than doing it right the first time."
         />
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {services.map((service) => (
@@ -131,7 +132,7 @@ function ProcessSection() {
         <SectionTitle
           eyebrow="How We Work"
           title="Understand. Build. Operate."
-          description="No mystery, no hand-offs to nowhere. We stay with the work from first conversation to production health check."
+          description="No mystery, no hand-offs to nowhere. We stay with the work from first conversation to production health check — and every sprint in between."
           align="center"
         />
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -162,10 +163,10 @@ function CTABanner() {
     <section className="bg-gradient-to-r from-accent-amber to-accent-amber-dark py-16 md:py-20">
       <div className="mx-auto max-w-[1280px] px-4 text-center md:px-8 lg:px-10">
         <h2 className="font-heading text-2xl font-bold tracking-tight text-primary-950 sm:text-[2.25rem]">
-          Have a project in mind?
+          Ready to build something that lasts?
         </h2>
         <p className="mt-4 text-lg text-primary-900">
-          Let&apos;s talk about what you&apos;re building.
+          Tell us about your project — we respond within 24 hours.
         </p>
         <div className="mt-8">
           <Button

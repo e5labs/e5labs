@@ -27,7 +27,15 @@ import {
 export const metadata: Metadata = {
   title: "Services — E5Labs",
   description:
-    "Web application development, developer tooling, cloud architecture, and technical consulting. We build the software where engineering quality changes the outcome.",
+    "Web application development, developer tooling, cloud architecture, and technical consulting. We build the software where engineering quality is the difference between shipping and succeeding.",
+  openGraph: {
+    title: "Services — E5Labs",
+    description:
+      "Web application development, developer tooling, cloud architecture, and technical consulting. We build the software where engineering quality is the difference between shipping and succeeding.",
+    url: "https://e5labs.com/services",
+    siteName: "E5Labs",
+    type: "website",
+  },
 };
 
 const services = [
@@ -37,7 +45,7 @@ const services = [
     icon: Globe,
     title: "Web Application Development",
     description:
-      "Full-stack web platforms with React, Next.js, and Node — optimized for real traffic, real users, and real uptime. We build so you can scale without a rewrite.",
+      "Full-stack web platforms with React, Next.js, and Node — built for real traffic, real users, and real uptime. We design for evolution so you can scale without a rewrite.",
     features: [
       { icon: Code, label: "React & Next.js applications" },
       { icon: Cpu, label: "Full-stack TypeScript development" },
@@ -53,7 +61,7 @@ const services = [
     icon: Terminal,
     title: "Developer Tooling & APIs",
     description:
-      "CLIs, SDKs, and internal platforms that make engineers faster and happier. We build the tools we'd want to reach for ourselves — type-safe, well-documented, and a joy to use.",
+      "CLIs, SDKs, and internal platforms that make engineering teams measurably faster. We build the tools we'd want to reach for — type-safe, well-documented, and designed around real developer workflows.",
     features: [
       { icon: Code, label: "Type-safe APIs" },
       { icon: FileSearch, label: "Developer documentation" },
@@ -68,7 +76,7 @@ const services = [
     icon: Cloud,
     title: "Cloud Architecture & DevOps",
     description:
-      "Infrastructure that deploys cleanly, scales predictably, and doesn't surprise you at 2 AM. We design for operability first — because systems live or die in production.",
+      "Infrastructure that deploys cleanly, scales predictably, and doesn't surprise you at 2 AM. We design for operability first — because systems live or die in production, and we build for the life part.",
     features: [
       { icon: Database, label: "IaC (Terraform/Pulumi)" },
       { icon: Box, label: "Container orchestration" },
@@ -83,7 +91,7 @@ const services = [
     icon: Wrench,
     title: "Technical Consulting",
     description:
-      "Architecture reviews, technology decisions, and engineering strategy from people who've shipped production systems. We help you make the calls you won't regret in six months.",
+      "Architecture reviews, technology decisions, and engineering strategy from engineers who've shipped and operated production systems. We help you make the calls you won't regret in six months — or six years.",
     features: [
       { icon: FileSearch, label: "System design reviews" },
       { icon: Globe, label: "Migration planning" },
@@ -126,8 +134,8 @@ export default function ServicesPage() {
             What we build
           </h1>
           <p className="mx-auto mt-6 max-w-[600px] text-lg text-neutral-300 leading-relaxed">
-            Engineering where quality changes the outcome — for the teams that
-            can&apos;t afford to ship anything less.
+            Engineering where quality decides the outcome — for teams
+            that need software they can depend on, not just deploy.
           </p>
         </div>
       </section>
@@ -203,8 +211,8 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-[1280px] px-4 text-center md:px-8 lg:px-10">
           <SectionTitle
-            title="Have a project in mind?"
-            description="Let&apos;s discuss how we can help build what you have in mind."
+            title="Ready to start a project?"
+            description="Tell us about what you're building — we'll get back to you within 24 hours with next steps."
             align="center"
           />
           <div className="mt-8">
