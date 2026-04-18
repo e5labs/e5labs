@@ -84,8 +84,8 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-center">
-              <div className="relative aspect-square h-full w-full max-w-[480px] rounded-xl bg-primary-800 border border-primary-700 overflow-hidden">
+            <div className="flex items-center justify-center self-center">
+              <div className="relative h-[400px] w-full max-w-[480px] rounded-xl bg-primary-800 border border-primary-700 overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-8">
                   <div className="grid grid-cols-3 gap-2 sm:gap-4">
                     {[...Array(9)].map((_, i) => (
@@ -120,7 +120,7 @@ export default function AboutPage() {
             description="The principles behind every decision, every line of code, every partnership."
             align="center"
           />
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 items-stretch">
             {values.map((value) => (
               <ValueCard key={value.title} {...value} />
             ))}

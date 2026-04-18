@@ -114,7 +114,7 @@ function ServicesSection() {
           title="Shipping software that holds up"
           description="We concentrate on the work where engineering quality changes the outcome — where cutting corners costs more than doing it right."
         />
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}

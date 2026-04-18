@@ -16,7 +16,7 @@ export function ServiceCard({
   href,
 }: ServiceCardProps) {
   return (
-    <div className="group rounded-xl border border-primary-700 bg-primary-800 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent-amber/30 motion-reduce:transition-none">
+    <div className="group flex flex-col rounded-xl border border-primary-700 bg-primary-800 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-accent-amber/30 motion-reduce:transition-none">
       <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent-amber/10">
         <Icon className="h-8 w-8 text-accent-amber" />
       </div>
@@ -25,7 +25,7 @@ export function ServiceCard({
       </h3>
       <p className="mt-3 text-neutral-400 leading-relaxed">{description}</p>
       {href && (
-        <div className="mt-6">
+        <div className="mt-auto">
           <Button
             render={<Link href={href} />}
             variant="ghost"

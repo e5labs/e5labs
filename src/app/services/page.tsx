@@ -139,9 +139,9 @@ export default function ServicesPage() {
               <div
                 key={service.id}
                 id={service.id}
-                className="scroll-mt-24 border-t border-primary-700 py-16 md:py-24 first:border-t-0 first:pt-0"
+                className="scroll-mt-24 border-t border-primary-700 py-12 md:py-20 first:border-t-0 first:pt-0"
               >
-                <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
+                <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 lg:items-start">
                   <div className="lg:col-span-7">
                     <div className="flex items-start gap-6">
                       <span className="font-heading text-[4.5rem] font-bold leading-none text-primary-700 select-none hidden sm:block">

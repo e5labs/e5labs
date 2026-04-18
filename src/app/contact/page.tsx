@@ -76,7 +76,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="mt-8 rounded-xl border border-primary-700 bg-primary-800 p-6">
-                  <p className="text-neutral-400 leading-relaxed">
+                  <p className="text-sm text-neutral-400 leading-relaxed">
                     Whether you&apos;re early-stage with a concept or further
                     along with existing systems, we&apos;d like to hear about
                     what you&apos;re building — and where it needs to go next.
