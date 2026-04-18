@@ -40,12 +40,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="hero-divider py-20 md:py-28">
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
           <h2 className="sr-only">Send us a message</h2>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
-              <ContactForm />
+              <div className="rounded-xl border border-primary-600 bg-primary-800/50 p-8">
+                <ContactForm />
+              </div>
             </div>
 
             <div className="lg:col-span-5">
@@ -54,7 +56,7 @@ export default function ContactPage() {
               </h3>
               <div className="mt-8 space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-accent-amber/10">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-accent-amber/10 ring-1 ring-accent-amber/20">
                     <Mail className="h-5 w-5 text-accent-amber" />
                   </div>
                   <div>
@@ -68,20 +70,20 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-accent-amber/10">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-accent-amber/10 ring-1 ring-accent-amber/20">
                     <Clock className="h-5 w-5 text-accent-amber" />
                   </div>
                   <div>
                     <p className="font-medium text-neutral-50">
                       Response time
                     </p>
-                    <p className="text-neutral-400">
+                    <p className="text-neutral-300">
                       Usually within 24 hours
                     </p>
                   </div>
                 </div>
-                <div className="mt-8 rounded-xl border border-primary-700 bg-primary-800 p-6">
-                  <p className="text-sm text-neutral-400 leading-relaxed">
+                <div className="mt-8 rounded-xl border border-primary-600 bg-gradient-to-br from-primary-800 to-primary-900 p-6">
+                  <p className="text-sm text-neutral-300 leading-relaxed">
                     We work with teams at every stage — validating a concept,
                     scaling an existing product, or re-architecting a system
                     that needs to hold up under pressure. The earlier you bring

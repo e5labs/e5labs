@@ -140,21 +140,21 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="hero-divider py-20 md:py-28">
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
           <div className="space-y-0">
             {services.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
-                className="scroll-mt-24 border-t border-primary-700 py-12 md:py-20 first:border-t-0 first:pt-0"
+                className="scroll-mt-24 border-t border-primary-700/50 py-12 md:py-20 first:border-t-0 first:pt-0"
               >
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 lg:items-start">
                   <div className="lg:col-span-7">
                     <div className="flex items-start gap-6">
-                      <span className="font-heading text-[4.5rem] font-bold leading-none text-primary-700 select-none hidden sm:block">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent-amber/20 text-accent-amber font-heading font-semibold text-sm ring-1 ring-accent-amber/30 sm:block hidden">
                         {service.number}
-                      </span>
+                      </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           <service.icon className="h-6 w-6 text-accent-amber" />
@@ -162,26 +162,29 @@ export default function ServicesPage() {
                             {service.title}
                           </h2>
                         </div>
-                        <p className="text-lg text-neutral-400 leading-relaxed">
+                        <p className="text-lg text-neutral-300 leading-relaxed">
                           {service.description}
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="lg:col-span-5">
-                    <ul className="space-y-3">
-                      {service.features.map((feature) => (
-                        <li
-                          key={feature.label}
-                          className="flex items-center gap-3"
-                        >
-                          <feature.icon className="h-4 w-4 text-accent-amber flex-shrink-0" />
-                          <span className="text-neutral-300">
-                            {feature.label}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="rounded-xl border border-primary-600 bg-gradient-to-br from-primary-800 to-primary-900 p-6">
+                      <h3 className="font-heading text-sm font-medium uppercase tracking-[0.08em] text-accent-amber mb-4">Capabilities</h3>
+                      <ul className="space-y-3">
+                        {service.features.map((feature) => (
+                          <li
+                            key={feature.label}
+                            className="flex items-center gap-3"
+                          >
+                            <feature.icon className="h-4 w-4 text-accent-amber flex-shrink-0" />
+                            <span className="text-neutral-300">
+                              {feature.label}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -190,7 +193,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-primary-900/50">
+      <section className="section-accent py-20 md:py-28">
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
           <h3 className="font-heading text-xl font-semibold text-neutral-50 mb-8">
             Technologies We Use
@@ -199,7 +202,7 @@ export default function ServicesPage() {
             {technologies.map((tech) => (
               <span
                 key={tech.label}
-                className="inline-flex items-center rounded-full border border-primary-700 bg-primary-800 px-4 py-2 text-sm text-neutral-300"
+                className="inline-flex items-center rounded-full border border-primary-600 bg-primary-800 px-4 py-2 text-sm text-neutral-300"
               >
                 {tech.label}
               </span>
@@ -208,7 +211,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="section-divider py-20 md:py-28">
         <div className="mx-auto max-w-[1280px] px-4 text-center md:px-8 lg:px-10">
           <SectionTitle
             title="Ready to start a project?"

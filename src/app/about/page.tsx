@@ -69,7 +69,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="hero-divider py-20 md:py-28">
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
                 eyebrow="Our Mission"
                 title="Software where quality decides the outcome"
               />
-              <div className="mt-6 space-y-4 text-lg text-neutral-400 leading-relaxed">
+              <div className="mt-6 space-y-4 text-lg text-neutral-300 leading-relaxed">
                 <p>
                   E5Labs exists to solve the software problems where engineering
                   quality decides the outcome — where a meaningful improvement in
@@ -120,7 +120,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-primary-900/50">
+      <section className="section-accent py-20 md:py-28">
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
           <SectionTitle
             eyebrow="Our Values"
@@ -136,7 +136,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="section-divider py-20 md:py-28">
         <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
           <SectionTitle
             eyebrow="Our Team"
@@ -144,7 +144,7 @@ export default function AboutPage() {
             description="Full-stack, backend, and infrastructure engineers with production experience at scale."
             align="center"
           />
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <TeamCard initials="FS" name="Full-Stack Engineering" title="React · Next.js · Node" />
             <TeamCard initials="BE" name="Backend Engineering" title="APIs · Data · Reliability" />
             <TeamCard initials="IN" name="Infrastructure" title="Cloud · DevOps · Scale" />

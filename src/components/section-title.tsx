@@ -38,7 +38,7 @@ export function SectionTitle({
           </span>
         </div>
       )}
-      <h2 className="font-heading text-2xl font-semibold tracking-tight text-neutral-50 sm:text-[2.25rem] sm:leading-[1.25]">
+      <h2 className="font-heading text-3xl font-semibold tracking-tight text-neutral-50 sm:text-[2.5rem] sm:leading-[1.2]">
         {title}
       </h2>
       {description && (

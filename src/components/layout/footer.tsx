@@ -89,8 +89,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-primary-700 pt-8">
-          <p className="text-xs text-neutral-500">
+        <div className="mt-12 border-t border-accent-amber/20 pt-8">
+          <p className="text-sm text-neutral-400">
             &copy; {new Date().getFullYear()} E5Labs. All rights reserved.
           </p>
         </div>

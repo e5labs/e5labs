@@ -62,9 +62,9 @@ export function Header() {
       >
         Skip to content
       </a>
-      <header className="fixed top-0 z-50 w-full border-b border-primary-700/40 bg-primary-900/80 backdrop-blur-md">
+      <header className="fixed top-0 z-50 w-full border-b border-primary-600/40 bg-primary-900/80 backdrop-blur-md">
         <div className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between px-4 md:px-8 lg:px-10">
-          <Logo />
+          <Logo aria-label="E5Labs home" />
 
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -97,7 +97,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-[300px] border-primary-700/40 bg-primary-900 sm:w-[350px]"
+              className="w-[300px] border-l-2 border-l-accent-amber/30 border-primary-700/40 bg-primary-900 sm:w-[350px]"
             >
               <SheetTitle className="sr-only">Navigation menu</SheetTitle>
               <nav className="flex flex-col gap-6 mt-12">

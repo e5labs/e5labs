@@ -71,9 +71,9 @@ function HeroSection() {
               Software Engineering
             </span>
           </div>
-          <h1 className="font-heading text-[3rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-50 sm:text-[3.75rem] lg:text-[4.5rem] animate-fade-up opacity-0 [animation-delay:150ms] motion-reduce:animate-none motion-reduce:opacity-100">
+          <h1 className="font-heading text-[3.5rem] font-bold leading-[1.05] tracking-[-0.02em] text-neutral-50 sm:text-[4.25rem] lg:text-[5.5rem] animate-fade-up opacity-0 [animation-delay:150ms] motion-reduce:animate-none motion-reduce:opacity-100">
             Engineering that{" "}
-            <span className="bg-gradient-to-r from-accent-amber via-accent-amber-light to-accent-amber bg-clip-text text-transparent">
+            <span className="relative bg-gradient-to-r from-accent-amber via-accent-amber-light to-accent-amber bg-clip-text text-transparent after:absolute after:inset-0 after:blur-2xl after:bg-accent-amber/20 after:-z-10">
               changes the outcome
             </span>
           </h1>
@@ -108,7 +108,7 @@ function HeroSection() {
 
 function ServicesSection() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="hero-divider py-20 md:py-28">
       <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
         <SectionTitle
           eyebrow="What We Build"
@@ -127,7 +127,7 @@ function ServicesSection() {
 
 function ProcessSection() {
   return (
-    <section className="py-16 md:py-24 bg-primary-900/50">
+    <section className="section-accent py-20 md:py-28">
       <div className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-10">
         <SectionTitle
           eyebrow="How We Work"
@@ -139,9 +139,9 @@ function ProcessSection() {
           {processSteps.map((step, i) => (
             <div key={step.title} className="relative flex flex-col items-center text-center">
               {i < processSteps.length - 1 && (
-                <div className="absolute top-8 left-[calc(50%+40px)] hidden h-px w-[calc(100%-80px)] bg-gradient-to-r from-primary-700 to-transparent md:block" />
+                <div className="absolute top-8 left-[calc(50%+40px)] hidden h-px w-[calc(100%-80px)] bg-gradient-to-r from-accent-amber/40 to-accent-amber/5 md:block" />
               )}
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-accent-amber/30 bg-primary-800">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-accent-amber/50 bg-primary-800 shadow-[inset_0_0_12px_rgba(245,158,11,0.1)]">
                 <step.icon className="h-7 w-7 text-accent-amber" />
               </div>
               <h3 className="mt-6 font-heading text-xl font-semibold text-neutral-50">
@@ -171,8 +171,8 @@ function CTABanner() {
         <div className="mt-8">
           <Button
             render={<Link href="/contact" />}
-            variant="outline"
-            className="rounded-full border-primary-950 text-primary-950 hover:bg-primary-950/10 font-heading font-medium h-11 px-6"
+            className="rounded-full bg-primary-950 text-accent-amber hover:bg-primary-900 font-heading font-semibold h-11 px-6"
+            size="lg"
           >
             Start a Conversation
           </Button>

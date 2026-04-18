@@ -52,6 +52,7 @@
   --color-primary-900: #111827;
   --color-primary-800: #1e293b;
   --color-primary-700: #334155;
+  --color-primary-600: #475569;
   --color-accent-amber: #f59e0b;
   --color-accent-amber-light: #fbbf24;
   --color-accent-amber-dark: #d97706;
@@ -130,4 +131,42 @@
   html {
     @apply scroll-smooth;
   }
+}
+
+.section-accent {
+  position: relative;
+  background: var(--color-primary-900);
+}
+.section-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.05), transparent);
+}
+
+.hero-divider {
+  position: relative;
+}
+.hero-divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, var(--color-primary-950), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes draw-line {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.animate-draw-line {
+  animation: draw-line 1s ease-out forwards;
+  transform-origin: left;
 }

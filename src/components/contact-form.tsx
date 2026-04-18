@@ -16,11 +16,11 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-xl border border-accent-emerald/30 bg-accent-emerald/5 p-8">
+      <div className="rounded-xl border border-accent-amber/30 bg-accent-amber/5 p-8">
         <h2 className="font-heading text-xl font-semibold text-neutral-50">
           Thank you!
         </h2>
-        <p className="mt-2 text-neutral-400">
+        <p className="mt-2 text-neutral-300">
           We&apos;ve received your message and will get back to you within 24
           hours.
         </p>
