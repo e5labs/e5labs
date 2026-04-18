@@ -6,11 +6,11 @@ import { Mail, Clock } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact — E5Labs",
   description:
-    "Get in touch with E5Labs. Tell us about your project and we'll get back to you within 24 hours.",
+    "Tell us about your project. We respond within 24 hours — usually sooner.",
   openGraph: {
     title: "Contact — E5Labs",
     description:
-      "Get in touch with E5Labs. Tell us about your project and we'll get back to you within 24 hours.",
+      "Tell us about your project. We respond within 24 hours — usually sooner.",
   },
 };
 
@@ -26,12 +26,12 @@ export default function ContactPage() {
               Contact
             </span>
           </div>
-          <h1 className="font-heading text-[3rem] font-bold leading-[1.2] tracking-[-0.01em] text-neutral-50 sm:text-[2.25rem] md:text-[3rem]">
+          <h1 className="font-heading text-[2.25rem] font-bold leading-[1.2] tracking-[-0.01em] text-neutral-50 md:text-[3rem]">
             Let&apos;s build something.
           </h1>
           <p className="mx-auto mt-6 max-w-[600px] text-lg text-neutral-300 leading-relaxed">
             Tell us about your project and we&apos;ll get back to you within 24
-            hours.
+            hours — usually sooner.
           </p>
         </div>
       </section>
@@ -71,15 +71,15 @@ export default function ContactPage() {
                       Response time
                     </p>
                     <p className="text-neutral-400">
-                      We respond within 24 hours
+                      Usually within 24 hours
                     </p>
                   </div>
                 </div>
                 <div className="mt-8 rounded-xl border border-primary-700 bg-primary-800 p-6">
                   <p className="text-neutral-400 leading-relaxed">
                     Whether you&apos;re early-stage with a concept or further
-                    along with existing systems, we&apos;d love to hear about
-                    what you&apos;re building.
+                    along with existing systems, we&apos;d like to hear about
+                    what you&apos;re building — and where it needs to go next.
                   </p>
                 </div>
               </div>
