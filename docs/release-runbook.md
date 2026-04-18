@@ -10,7 +10,7 @@
 | **Node** | 22 (see `.nvmrc`) |
 | **Package manager** | npm |
 | **CI** | GitHub Actions — `.github/workflows/ci.yml` |
-| **Domain** | `e5labs.com` (DNS managed in Vercel) |
+| **Domain** | `e5labs.com` (DNS managed in Cloudflare; hosting on Vercel) |
 
 ---
 
@@ -123,7 +123,34 @@ If a production deploy introduces a breaking issue:
 |---|---|
 | Engineering lead | Fill in when team is established |
 | Vercel account owner | Fill in when team is established |
-| DNS registrar admin | Fill in when team is established |
+| DNS registrar admin | Cloudflare (ddavtian) |
+
+---
+
+## DNS Configuration
+
+| Record | Type | Name | Value | Proxy | Purpose |
+|--------|------|------|-------|-------|---------|
+| A | `@` | `e5labs.com` | `76.76.21.21` | DNS only (grey cloud) | Vercel production |
+| CNAME | `www` | `www.e5labs.com` | `cname.vercel-dns.com` | DNS only (grey cloud) | Vercel www redirect |
+
+**Important**: Both records must be set to **DNS only** (grey cloud ☁️, not orange cloud 🟠). Cloudflare proxy mode terminates TLS before reaching Vercel, which breaks automatic SSL certificate provisioning. Vercel must handle TLS termination to issue and renew Let's Encrypt certificates for the domain.
+
+**Existing records preserved** (do not modify):
+- MX records (Cloudflare Email Routing — 3 records)
+- SPF TXT (`v=spf1 include:_spf.mx.cloudflare.net ~all`)
+- DKIM TXT (`cf2024-1._domainkey.e5labs.com`)
+- DMARC TXT (`_dmarc.e5labs.com`)
+- ACME challenge TXT records (2x `_acme-challenge.e5labs.com`)
+- Google site verification TXT
+
+Nameservers: `gail.ns.cloudflare.com`, `greg.ns.cloudflare.com` (Cloudflare, not Vercel DNS)
+
+### DNS Troubleshooting
+
+- **Site not loading**: Verify A record points to `76.76.21.21` and CNAME for `www` points to `cname.vercel-dns.com`
+- **SSL errors**: Ensure both records are DNS-only (grey cloud), not proxied (orange cloud). Vercel provisions certificates automatically once DNS resolves correctly
+- **Certificate provisioning delay**: Up to 48 hours in rare cases; typically 1-10 minutes. Check Vercel dashboard → e5labs → Settings → Domains for status
 
 ---
 
