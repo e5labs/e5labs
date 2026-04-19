@@ -65,10 +65,58 @@ export default function Image() {
             justifyContent: "center",
             position: "relative",
             zIndex: 1,
-            gap: "24px",
+            gap: "20px",
             padding: "80px 80px",
           }}
         >
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 512 512"
+            style={{ marginBottom: "4px" }}
+          >
+            <rect width="512" height="512" fill="#0a0f1a" rx="96" />
+            <polygon
+              points="256,48 432,144 432,368 256,464 80,368 80,144"
+              fill="#0d1424"
+              stroke="#1e293b"
+              strokeWidth="2.5"
+            />
+            <g fill="#f8fafc">
+              <rect x="144" y="168" width="24" height="160" rx="3" />
+              <rect x="144" y="168" width="88" height="24" rx="3" />
+              <rect x="144" y="236" width="72" height="20" rx="3" />
+              <rect x="144" y="304" width="88" height="24" rx="3" />
+            </g>
+            <rect x="232" y="168" width="90" height="24" rx="3" fill="#f59e0b" />
+            <rect x="232" y="168" width="24" height="74" rx="3" fill="#f59e0b" />
+            <rect x="232" y="242" width="56" height="20" rx="3" fill="#f59e0b" />
+            <path
+              d="M 288 262 C 318 262, 332 280, 332 306 C 332 340, 310 356, 278 356 L 240 356"
+              fill="none"
+              stroke="#f59e0b"
+              strokeWidth="24"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <circle cx="338" cy="160" r="5" fill="#f59e0b" opacity="0.7" />
+            <circle cx="168" cy="350" r="4" fill="#f59e0b" opacity="0.5" />
+          </svg>
+
+          <h1
+            style={{
+              fontSize: "72px",
+              fontWeight: 700,
+              color: "#f8fafc",
+              lineHeight: 1.1,
+              textAlign: "center",
+              letterSpacing: "-0.02em",
+              margin: 0,
+            }}
+          >
+            E<span style={{ color: "#f59e0b" }}>5</span>Labs
+          </h1>
+
           <div
             style={{
               display: "flex",
@@ -97,28 +145,15 @@ export default function Image() {
             </span>
           </div>
 
-          <h1
-            style={{
-              fontSize: "80px",
-              fontWeight: 700,
-              color: "#f8fafc",
-              lineHeight: 1.1,
-              textAlign: "center",
-              letterSpacing: "-0.02em",
-              margin: 0,
-            }}
-          >
-            E5Labs
-          </h1>
-
           <p
             style={{
-              fontSize: "22px",
+              fontSize: "20px",
               color: "#94a3b8",
               lineHeight: 1.6,
               textAlign: "center",
               maxWidth: "680px",
               margin: 0,
+              marginTop: "4px",
             }}
           >
             Web applications, developer tools, and cloud infrastructure
@@ -130,7 +165,7 @@ export default function Image() {
               display: "flex",
               alignItems: "center",
               gap: "12px",
-              marginTop: "16px",
+              marginTop: "8px",
             }}
           >
             <div

@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   description:
     "E5Labs builds high-performance web applications, developer tooling, and cloud infrastructure for teams where engineering quality is the difference between shipping and succeeding. Remote-first. Production-obsessed.",
   metadataBase: new URL("https://e5labs.com"),
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "E5Labs — Engineering That Changes the Outcome",
     description:

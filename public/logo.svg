@@ -10,19 +10,11 @@
     </filter>
   </defs>
 
-  <!-- Dark background -->
   <rect width="512" height="512" fill="#0a0f1a" rx="104"/>
 
-  <!-- Hexagonal outline frame -->
   <polygon points="256,48 432,144 432,368 256,464 80,368 80,144"
     fill="#0d1424" stroke="#1e293b" stroke-width="2.5"/>
 
-  <!-- Active hex edges (amber trace) - top, top-right -->
-  <polyline points="256,48 432,144" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
-  <polyline points="256,48 80,144" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
-  <polyline points="256,48 256,72" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-
-  <!-- Subtle grid pattern inside hex -->
   <g opacity="0.06" stroke="#94a3b8" stroke-width="0.5">
     <line x1="160" y1="140" x2="352" y2="140"/>
     <line x1="144" y1="200" x2="368" y2="200"/>
@@ -35,7 +27,6 @@
     <line x1="344" y1="140" x2="344" y2="380"/>
   </g>
 
-  <!-- E letter - clean geometric construction -->
   <g fill="#f8fafc">
     <rect x="144" y="168" width="24" height="160" rx="3"/>
     <rect x="144" y="168" width="88" height="24" rx="3"/>
@@ -43,33 +34,25 @@
     <rect x="144" y="304" width="88" height="24" rx="3"/>
   </g>
 
-  <!-- 5 numeral - amber accent -->
   <g filter="url(#glow)">
-    <!-- 5 top bar (continues from E) -->
     <rect x="232" y="168" width="90" height="24" rx="3" fill="url(#amberGrad)"/>
-    <!-- 5 left vertical (top segment) -->
     <rect x="232" y="168" width="24" height="74" rx="3" fill="url(#amberGrad)"/>
-    <!-- 5 middle bar -->
     <rect x="232" y="242" width="56" height="20" rx="3" fill="url(#amberGrad)"/>
   </g>
 
-  <!-- 5 curve - the signature lower arc -->
   <path d="M 288 262 C 318 262, 332 280, 332 306 C 332 340, 310 356, 278 356 L 240 356"
     fill="none" stroke="url(#amberGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
 
-  <!-- Inner curve cutout to open the 5's belly -->
   <rect x="256" y="280" width="40" height="36" fill="#0d1424"/>
   <rect x="248" y="276" width="20" height="4" fill="#0d1424" rx="2"/>
 
-  <!-- Signal nodes -->
   <circle cx="338" cy="160" r="5" fill="#f59e0b" opacity="0.7"/>
   <circle cx="338" cy="160" r="10" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
 
   <circle cx="168" cy="350" r="4" fill="#f59e0b" opacity="0.5"/>
   <circle cx="168" cy="350" r="8" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.2"/>
 
-  <!-- "LABS" text -->
   <text x="256" y="420" text-anchor="middle"
-    font-family="'Instrument Sans', 'Work Sans', 'Space Grotesk', sans-serif"
+    font-family="'Space Grotesk', 'Instrument Sans', 'Work Sans', sans-serif"
     font-weight="600" font-size="28" fill="#94a3b8" letter-spacing="10">LABS</text>
 </svg>
