@@ -6,6 +6,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
+import { Logo } from "@/components/logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -13,16 +14,6 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/contact", label: "Contact" },
 ];
-
-function Logo() {
-  return (
-    <Link href="/" className="flex items-center gap-2">
-      <span className="text-xl font-heading font-bold tracking-tight">
-        E<span className="text-accent-amber">5</span>Labs
-      </span>
-    </Link>
-  );
-}
 
 function NavLink({
   href,
@@ -64,7 +55,7 @@ export function Header() {
       </a>
       <header className="fixed top-0 z-50 w-full border-b border-primary-600/60 bg-primary-900/80 backdrop-blur-md">
         <div className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between px-4 md:px-8 lg:px-10">
-          <Logo aria-label="E5Labs home" />
+          <Logo size="md" />
 
           <nav aria-label="Main navigation" className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (

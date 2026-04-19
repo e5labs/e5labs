@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
+import { Logo } from "@/components/logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -21,11 +22,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1280px] px-4 py-16 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-xl font-heading font-bold tracking-tight">
-                E<span className="text-accent-amber">5</span>Labs
-              </span>
-            </Link>
+            <Logo size="lg" />
             <div className="mt-2 h-0.5 w-6 bg-accent-amber" />
             <p className="mt-4 text-sm text-neutral-400 max-w-xs">
               Web applications, developer tools, and cloud infrastructure built
