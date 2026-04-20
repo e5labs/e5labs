@@ -34,11 +34,12 @@ Before merging any PR or cutting a release, verify:
   - `/` (homepage hero, services, process, CTA)
   - `/about`
   - `/services`
-  - `/contact` (form renders, submits without errors)
+  - `/contact` (form renders, submits, success state renders)
 - [ ] **No console errors** — open DevTools → Console on each Preview page
 - [ ] **Responsive spot-check** — verify layout at mobile (375 px) and desktop (1280 px)
 - [ ] **Accessibility quick-check** — tab through hero and nav, verify focus indicators
 - [ ] **Lighthouse baseline** — run Lighthouse on Preview; aim for Performance ≥ 90, Accessibility ≥ 95 (not a gate, but regressions warrant investigation)
+- [ ] **Vercel environment variables** — confirm all required env vars are set in Vercel dashboard (see Environment Variables section below)
 
 ---
 
@@ -162,6 +163,46 @@ Nameservers: `gail.ns.cloudflare.com`, `greg.ns.cloudflare.com` (Cloudflare, not
 | Vercel dashboard | https://vercel.com/dashboard |
 | GitHub repo | Fill in when repo is public |
 | CI workflow | `.github/workflows/ci.yml` |
+
+---
+
+## Environment Variables
+
+The following environment variables must be configured in the Vercel project for the contact form to work in production.
+
+| Variable | Required | Description | Where to set |
+|---|---|---|---|
+| `RESEND_API_KEY` | **Yes** | Resend API key for sending contact form emails. Get one at https://resend.com/api-keys | Vercel dashboard → e5labs → Settings → Environment Variables |
+| `RESEND_TO_EMAIL` | No | Destination email for contact form submissions. Defaults to `hello@e5labs.com` if not set | Vercel dashboard → e5labs → Settings → Environment Variables |
+
+**Failure mode**: If `RESEND_API_KEY` is not set, `POST /api/contact` returns HTTP 503. The form displays a user-facing error message, not a stack trace.
+
+**Email sender**: Contact form emails are sent from `onboarding@resend.dev` (Resend's default sandbox sender). Once domain verification is complete on Resend, update the `from` address in `src/app/api/contact/route.ts` to `E5Labs Contact <noreply@e5labs.com>` and verify the domain in Resend.
+
+**Setting env vars in Vercel**:
+1. Go to https://vercel.com → e5labs project → Settings → Environment Variables
+2. Add `RESEND_API_KEY` for Production, Preview, and Development environments
+3. Optionally add `RESEND_TO_EMAIL`
+4. Redeploy for changes to take effect (Settings → Redeploy, or push a new commit)
+
+---
+
+## Contact Form Operations
+
+| Item | Detail |
+|---|---|
+| **API route** | `POST /api/contact` |
+| **Rate limit** | 5 requests per IP per 60-second window |
+| **Validation** | Name (required, max 200), Email (required, valid format), Message (required, max 2000), Company (optional, max 200), Project type (optional, max 100) |
+| **Email provider** | Resend (`resend` npm package) |
+| **XSS protection** | All user input is HTML-escaped before insertion into email body |
+
+### Troubleshooting
+
+- **Contact form returns 503**: `RESEND_API_KEY` is not set in Vercel environment variables. Add it and redeploy.
+- **Contact form returns 429**: Rate limit exceeded (5 req/min per IP). Wait 60 seconds.
+- **Contact form returns 502**: Resend API error. Check Resend dashboard for outages or API key validity.
+- **Emails not arriving**: Check Resend dashboard → Logs. Verify the `from` address is verified. Sandbox (`onboarding@resend.dev`) only sends to the account email — verify a custom domain in Resend for production delivery.
 
 ---
 
